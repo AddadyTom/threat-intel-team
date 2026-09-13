@@ -9,5 +9,6 @@ services:
       - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
       - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
       - POLL_INTERVAL=900
+      - PYTHONUNBUFFERED=1
     volumes:
       - ./data:/app/data
