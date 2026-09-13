@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  threat-intel-agent:
+    build: .
+    container_name: threat_intel_agent
+    restart: always
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - TELEGRAM_CHAT_ID=${TELEGRAM_CHAT_ID}
+      - POLL_INTERVAL=900
+    volumes:
+      - ./data:/app/data
